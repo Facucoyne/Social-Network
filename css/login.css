@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: #f0f2f5;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+img{
+  width: 100px;  
+}
+
+/* CONTAINER */
+.login-container{
+  width:100%;
+  max-width:900px;
+  background:white;
+  border-radius:20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  box-shadow:0 25px 60px rgba(0,0,0,.3);
+  overflow:hidden;
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    
+}
+p{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-family: cursive;
+}
+a{
+    
+    color: #ffffff;
+}
+/* LEFT */
+.login-left{
+  background:linear-gradient(135deg,#04ce95,#012e0d);
+  color:white;
+  padding:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.login-left h1{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.login-left p{
+  font-size:18px;
+  opacity:.9;
+}
+
+/* CARD */
+.login-card{
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.login-card h2{
+  margin-bottom:20px;
+  font-size:26px;
+}
+
+.login-card input{
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+
+.btn-login{
+  background:#1877f2;
+  color:white;
+  border:none;
+  padding:14px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-login:hover{
+  background:#0f5fd7;
+}
+
+.divider{
+  text-align:center;
+  margin:15px 0;
+  color:#777;
+}
+
+.btn-google{
+  background:#fff;
+  border:1px solid #ccc;
+  padding:12px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn-register{
+  background:#42b72a;
+  color:white;
+  border:none;
+  padding:14px;
+  border-radius:12px;
+  font-size:15px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+
+
+.forgot{
+  text-align:center;
+  margin:10px 0;
+  color:#1877f2;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .login-container{
+    grid-template-columns:1fr;
+  }
+  .login-left{
+    display:none;
+  }
+}
+
