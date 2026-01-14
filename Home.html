@@ -61,7 +61,22 @@
   <!-- FEED -->
 
   
+  
   <div class="feed">
+<section class="ads-section" id="adBox">
+  <div class="ads-header">
+    <span class="ads-label">Publicidad</span>
+    <button class="close-ad" onclick="closeAd()">✕</button>
+  </div>
+
+  <a href="#" class="ad-card">
+    <img src="./img/programacion.jfif" alt="Publicidad">
+    <div>
+      <h4>Hosting rápido y seguro</h4>
+      <p>Tu web online en minutos</p>
+    </div>
+  </a>
+</section>
 
     <!-- CREATE POST -->
     <div class="create-post">
@@ -102,12 +117,7 @@
 
   <!-- RIGHTBAR -->
   <div class="rightbar">
-    <h3>Publicidad</h3>
-    <img class="banner" src="./img/banner.jfif" alt="">
-    <div class="status"><span class=""></span> <a class="Publicidad" href="">Desarrollo Web</a></div>
-   
-    <img class="banner" src="./img/Banner1.jfif" alt="">
-    <div class="status"><span class=""></span> <a class="Publicidad" href="">Burger</a></div>
+    <h3> En Desarrollo</h3>
     
     <div class="status"><span class=""></span> En Desarrollo</div>
     <div class="status"><span class=""></span> En Desarrollo</div>
@@ -116,6 +126,12 @@
 
 </div>
 
+
+<script>
+function closeAd() {
+  document.getElementById("adBox").style.display = "none";
+}
+</script>
 
 
 </div>
