@@ -63,20 +63,44 @@
   
   
   <div class="feed">
-<section class="ads-section" id="adBox">
-  <div class="ads-header">
-    <span class="ads-label">Publicidad</span>
-    <button class="close-ad" onclick="closeAd()">✕</button>
-  </div>
+<div class="ad-modal-overlay" id="adModalProCard">
+  <div class="ad-card-pro">
+    <button class="ad-close-pro" aria-label="Cerrar" onclick="closeProCard()">✕</button>
 
-  <a href="#" class="ad-card">
-    <img src="./img/programacion.jfif" alt="Publicidad">
-    <div>
-      <h4>Hosting rápido y seguro</h4>
-      <p>Tu web online en minutos</p>
+    <div class="ad-card-header">
+      <span class="ad-badge">Publicidad</span>
     </div>
-  </a>
-</section>
+
+    <div class="ad-card-body">
+      <img src="https://cdn-icons-png.flaticon.com/512/4149/4149644.png" alt="Publicidad">
+      <h3>Impulsá tu marca en SocialTree</h3>
+      <p>
+        Llegá a una audiencia real con anuncios simples, medibles y efectivos.
+      </p>
+    </div>
+
+    <div class="ad-card-footer">
+      <!--Comenzar para pagar y agregar publicidad-->
+      <a href="#" class="ad-btn-primary">Comenzar</a>
+      <!--Informacion de la empresa-->
+      <a href="#" class="ad-btn-secondary">Más info</a>
+    </div>
+  </div>
+</div>
+<script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("adModalProCard").style.display = "flex";
+  }, 2000);
+});
+
+function closeProCard() {
+  document.getElementById("adModalProCard").style.display = "none";
+}
+</script>
+
+
+
 
     <!-- CREATE POST -->
     <div class="create-post">
@@ -127,11 +151,8 @@
 </div>
 
 
-<script>
-function closeAd() {
-  document.getElementById("adBox").style.display = "none";
-}
-</script>
+
+
 
 
 </div>

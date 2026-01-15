@@ -329,47 +329,124 @@ img{
   
 }
 
-.ads-section {
-  background: #f5f7f6;
-  border-radius: 14px;
-  padding: 12px;
-  margin: 20px 0;
-  position: relative;
-  border: 1px solid #d4d6d6 ;
-}
-
-.ads-header {
-  display: flex;
-  justify-content: space-between;
+.ad-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: none;
   align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.ads-label {
-  font-size: 12px;
-  color: #7a7a7a;
+.ad-card-pro {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 92%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  animation: cardFade .3s ease;
 }
 
-.close-ad {
-  background: none;
+.ad-close-pro {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 20px;
   border: none;
-  font-size: 18px;
+  background: none;
   cursor: pointer;
-  color: #888;
+  color: #6b7280;
 }
 
-.close-ad:hover {
-  color: #000;
+.ad-close-pro:hover {
+  color: #111827;
 }
 
-.ad-card {
+.ad-card-header {
+  padding: 16px 22px 0;
+}
+
+.ad-badge {
+  background: #e6f9f0;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.ad-card-body {
+  padding: 10px 22px 20px;
+  text-align: center;
+}
+
+.ad-card-body img {
+  width: 56px;
+  margin: 14px auto;
+}
+
+.ad-card-body h3 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #111827;
+}
+
+.ad-card-body p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.ad-card-footer {
+  padding: 18px 22px 22px;
   display: flex;
   gap: 10px;
-  text-decoration: none;
-  color: inherit;
-  margin-top: 10px;
 }
 
-.ad-card img {
-  width: 100px;
-  border-radius: 10px;
+.ad-btn-primary {
+  flex: 1;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ad-btn-secondary {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 10px 0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+
+@keyframes cardFade {
+  from { opacity: 0; transform: translateY(8px) scale(.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .ad-card-pro {
+    max-width: 360px;
+  }
+
+  .ad-card-body h3 {
+    font-size: 18px;
+  }
+
+  .ad-card-body p {
+    font-size: 13px;
+  }
 }

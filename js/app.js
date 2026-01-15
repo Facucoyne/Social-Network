@@ -1,17 +1,12 @@
 <script>
-function closeAd() {
-  document.getElementById("adBox").style.display = "none";
-}
-</script>
-<script>
-const adBox = document.getElementById("adBox");
+// Mostrar modal al cargar (con delay)
+window.onload = function () {
+  setTimeout(() => {
+    document.getElementById("adModal").style.display = "flex";
+  }, 2000); // 2 segundos
+};
 
-if (localStorage.getItem("adClosed")) {
-  adBox.style.display = "none";
-}
-
-function closeAd() {
-  adBox.style.display = "none";
-  localStorage.setItem("adClosed", "true");
+function closeAdModal() {
+  document.getElementById("adModal").style.display = "none";
 }
 </script>
